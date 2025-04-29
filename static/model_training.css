@@ -1,0 +1,212 @@
+   body {
+       font-family: 'Arial', sans-serif;
+       margin: 0;
+       padding: 0;
+       background-image: url("/static/pictures/background.png");
+       background-size: cover;
+       background-position: center;
+       min-height: 100vh;
+       color: #495057;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       line-height: 1.6;
+   }
+
+   #hengfu {
+       width: 100%;
+       height: 200px;
+       border-radius: 0;
+       margin-bottom: 30px;
+       animation: hengfu 20s linear 0ms infinite;
+       background-size: cover;
+       background-position: center;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   }
+
+   #biaoyu {
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       margin: auto;
+       text-align: center;
+       width: 100%;
+       padding: 0px;
+       font-size: 80px;
+       color: rgb(12, 135, 243)
+   }
+
+   #hengfu:hover {
+       animation-play-state: paused;
+   }
+
+   @keyframes hengfu {
+       0% {
+           background-image: url(/static/pictures/hengfu1.jpg);
+       }
+
+       25% {
+           background-image: url(/static/pictures/hengfu2.jpg);
+       }
+
+       50% {
+           background-image: url(/static/pictures/hengfu3.jpg);
+           background-position: 0px -50px;
+       }
+
+       75% {
+           background-image: url(/static/pictures/hengfu4.jpg);
+       }
+
+       100% {
+           background-image: url(/static/pictures/hengfu1.jpg);
+       }
+   }
+
+   #container {
+       display: flex;
+       width: 90%;
+       max-width: 1200px;
+       padding: 30px;
+   }
+
+   #input-container {
+       display: flex;
+       flex-direction: column;
+       width: 50%;
+       margin-right: 20px;
+   }
+
+   #box3 {
+       width: 50%;
+       background-color: #ffffff;
+       border-radius: 12px;
+       padding: 25px;
+       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+       border: 1px solid #e9ecef;
+       font-size: 1.1em;
+       color: #6c757d;
+       word-wrap: break-word;
+   }
+
+   .box {
+       background-color: #ffffff;
+       border-radius: 12px;
+       padding: 25px;
+       margin-bottom: 25px;
+       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+       border: 1px solid #e9ecef;
+   }
+
+   /* #box1 {}
+
+        #box2 {}
+
+        #box4 {} */
+
+   #box5 {
+       background-color: #007bff;
+       color: white;
+       padding: 12px 25px;
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: background-color 0.3s ease, transform 0.2s ease;
+       text-align: center;
+       margin: 30px auto;
+       display: block;
+       width: fit-content;
+       position: static;
+       left: auto;
+       font-size: 1.1em;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   }
+
+   #box5:hover {
+       background-color: #0056b3;
+   }
+
+   #box5:active {
+       transform: scale(0.95);
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+   }
+
+   /* Form styling */
+   #key-value label {
+       display: inline-block;
+       width: 100px;
+       text-align: right;
+       margin-right: 15px;
+       color: #555;
+   }
+
+   #key-value input[type="text"] {
+       padding: 10px;
+       border: 1px solid #ced4da;
+       border-radius: 6px;
+       width: calc(100% - 115px);
+       box-sizing: border-box;
+       margin-bottom: 10px;
+       font-size: 1em;
+   }
+
+   #newkey {
+       background-color: #28a745;
+       color: white;
+       padding: 10px 20px;
+       border: none;
+       border-radius: 6px;
+       cursor: pointer;
+       transition: background-color 0.3s ease, transform 0.2s ease;
+   }
+
+   #newkey:hover {
+       background-color: #218838;
+   }
+
+   #newkey:active {
+       transform: scale(0.95);
+   }
+
+   /* Gender and Character radio button styling */
+   #gender p,
+   #character p {
+       margin-bottom: 15px;
+       color: #555;
+   }
+
+   #gender input[type="radio"],
+   #character input[type="radio"] {
+       margin-right: 8px;
+   }
+
+   #gender label,
+   #character label {
+       margin-right: 20px;
+       color: #555;
+   }
+
+   /* .added_value {
+       position: relative;
+
+   }
+
+   .added_key {
+       position: relative;
+       left: 13px;
+   } */
+
+   .btn-transition {
+       font-family: 'Arial', sans-serif;
+       background-color: #2ecc71;
+       color: white;
+       border: none;
+       padding: 10px 20px;
+       font-size: 16px;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+   }
+
+   .btn-transition:hover {
+       background-color: #27ae60;
+       transform: translateY(-3px);
+   }

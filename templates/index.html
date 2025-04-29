@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>model_training</title>
+    <link rel="stylesheet" href="/static/model_training.css">
+</head>
+
+<body>
+    <div id="hengfu"></div>
+    <div id="biaoyu">Make HIT Great Again</div>
+    <div id="container">
+        <div id="input-container">
+            <div id="box1" class="box">
+                <div id="gender">
+                    <p>请选择驾驶员的性别：</p>
+                    <input type="radio" id="sex_option1" name="gender">
+                    <label for="sex_option1">男性</label>
+                    <input type="radio" id="sex_option2" name="gender">
+                    <label for="sex_option2">女性</label>
+                </div>
+                <div id="smoke">
+                    <p>是否抽烟：</p>
+                    <input type="radio" id="is_smoking1" name="smoke">
+                    <label for="smoke_option1">是</label>
+                    <input type="radio" id="is_smoking2" name="smoke">
+                    <label for="smoke_option2">否</label>
+                </div>
+                <div id="phone">
+                    <p>是否接打电话：</p>
+                    <input type="radio" id="is_phoning1" name="phone">
+                    <label for="phone_option1">是</label>
+                    <input type="radio" id="is_phoning2" name="phone">
+                    <label for="phone_option2">否</label>
+                </div>
+                <div id="surf">
+                    <p>是否玩手机：</p>
+                    <input type="radio" id="is_surfing1" name="surf">
+                    <label for="surf_option1">是</label>
+                    <input type="radio" id="is_surfing2" name="surf">
+                    <label for="surf_option2">否</label>
+                </div>
+                <div id="close_eyes">
+                    <p>是否闭眼：</p>
+                    <input type="radio" id="is_closing1" name="close_eyes">
+                    <label for="close_eyes_option1">是</label>
+                    <input type="radio" id="is_closing2" name="close_eyes">
+                    <label for="close_eyes_option2">否</label>
+                </div>
+                <div id="tired">
+                    <p>是否打哈欠：</p>
+                    <input type="radio" id="is_tired1" name="tired">
+                    <label for="tired_option1">是</label>
+                    <input type="radio" id="is_tired2" name="tired">
+                    <label for="tired_option2">否</label>
+                </div>
+                <div id="distracted">
+                    <p>是否分神：</p>
+                    <input type="radio" id="is_distracted1" name="distracted">
+                    <label for="distracted_option1">是</label>
+                    <input type="radio" id="is_distracted2" name="distracted">
+                    <label for="distracted_option2">否</label>
+                </div>
+                <div id="belt">
+                    <p>驾驶员是否系安全带：</p>
+                    <input type="radio" id="is_belt1" name="belt">
+                    <label for="belt_option1">是</label>
+                    <input type="radio" id="is_belt2" name="belt">
+                    <label for="belt_option2">否</label>
+                </div>
+                <div id="camera_image">
+                    <p>摄像头是否无图像：</p>
+                    <input type="radio" id="is_camera_image1" name="camera_image">
+                    <label for="camera_image_option1">是</label>
+                    <input type="radio" id="is_camera_image2" name="camera_image">
+                    <label for="camera_image_option2">否</label>
+                </div>
+                <div id="camera_cover">
+                    <p>摄像头是否遮挡：</p>
+                    <input type="radio" id="camera_cover1" name="camera_cover">
+                    <label for="camera_cover_option1">是</label>
+                    <input type="radio" id="camera_cover2" name="camera_cover">
+                    <label for="camera_cover_option2">否</label>
+                </div>
+                <div id="camera_deflection">
+                    <p>摄像头是否偏转：</p>
+                    <input type="radio" id="is_deflected1" name="camera_deflection">
+                    <label for="camera_deflection_option1">是</label>
+                    <input type="radio" id="is_deflected2" name="camera_deflection">
+                    <label for="camera_deflection_option2">否</label>
+                </div>
+                <div id="overcrowding">
+                    <p>是否超员：</p>
+                    <input type="radio" id="is_overcrowding1" name="overcrowding">
+                    <label for="overcrowding_option1">是</label>
+                    <input type="radio" id="is_overcrowding2" name="overcrowding">
+                    <label for="overcrowding_option2">否</label>
+                </div>
+                <div id="overspeeding">
+                    <p>是否超速：</p>
+                    <input type="radio" id="is_overspeeding1" name="overspeeding">
+                    <label for="overspeeding_option1">是</label>
+                    <input type="radio" id="is_overspeeding2" name="overspeeding">
+                    <label for="overspeeding_option2">否</label>
+                </div>
+                <div id="passenger_belt">
+                    <p>是否存在乘客不系安全带：</p>
+                    <input type="radio" id="passenger_belt1" name="passenger_belt">
+                    <label for="passenger_belt_option1">是</label>
+                    <input type="radio" id="is_phoning1" name="passenger_belt">
+                    <label for="passenger_belt_option2">否</label>
+                </div>
+            </div>
+            <div id="box2" class="box">
+                <form id="key-value">
+                    <label>当前车速</label>:<input type="text" name="speed">(km/h)<br>
+                </form>
+            </div>
+            <div id="box4" class="box">
+                <form>
+                    <p>增加新的key-value值:</p>
+                    key:<input type="text" name="added_key" class="added_key">
+                    value:<input type="text" name="added_value" class="added_value">
+                    <input type="submit" value="提交" id="newkey">
+                </form>
+            </div>
+            <div id="box5" class="box">
+                <button class="btn-transition">生成</button>
+            </div>
+        </div>
+        <div id="box3" class="box">
+            <div><span>提醒文本：</span></div>
+            <div id="loading" style="display:none;">生成中...</div>
+            <div id="warning-text"></div>
+        </div>
+    </div>
+    <script src="/static/js_change0.js"></script>
+</body>
+
+</html>
