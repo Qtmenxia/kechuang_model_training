@@ -42,14 +42,14 @@ def _generate_single_warning(form_data):
     }
 
     # 2. 构建Prompt
-    prompt_content = f"驾驶员性别: {gender}, 当前车速: {speed} km/h"
+    prompt_content = f"驾驶员性别: {gender}, 当前车速: {speed}"
     if added_key_value:
         for key, value in added_key_value.items():
             prompt_content += f", {key}: {value}"
     prompt = (
     f"请为一位驾驶员生成一段个性化的、搞笑的、危险驾驶行为的提示文本。"
     f"下述特征源于车载摄像头拍摄的照片分析，特征是：{prompt_content}, "
-    f"其中分别对应着：性别(gender)、当前车速(speed)、驾驶员是否抽烟(smoke)、"
+    f"其中分别对应着：性别(gender)、当前车速(speed,单位为km/h)、驾驶员是否抽烟(smoke)、"
     f"驾驶员是否接打电话(phone)、驾驶员是否玩手机(surf)、驾驶员是否闭眼(close_eyes)、"
     f"驾驶员是否疲劳(tired)、驾驶员是否分心(distracted)、驾驶员是否系安全带(belt)、"
     f"摄像头是否有图像(camera_image)、摄像头是否被遮挡(camera_cover)、"

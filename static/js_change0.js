@@ -1,5 +1,5 @@
 // 新增批量生成函数（基于网页7的安全随机数生成）
-function generateBatchParams(total = 10) {
+function generateBatchParams(total = 100) {
     const batchParams = [];
 
     // 创建特征池（基于网页6的字符集扩展思想）
@@ -12,7 +12,7 @@ function generateBatchParams(total = 10) {
         // 生成随机特征（基于网页2的数学随机方法）
         const params = {
             gender: Math.random() > 0.5 ? '男性' : '女性',
-            character: `驾驶员${String.fromCharCode(65 + i % 26)}`, // 自动生成驾驶员编号
+            character: `驾驶员${i+1}`, // 自动生成驾驶员编号
             speed: Math.floor(Math.random() * 160), // 0-160km/h随机车速
             added_key_value: {}
         };
@@ -33,7 +33,7 @@ document.querySelector('#box5 button').addEventListener('click', async function 
 
     try {
         // 生成100组参数（基于网页7的批量生成方案）
-        const parameters = generateBatchParams(10);
+        const parameters = generateBatchParams(100);
 
         // 发送批量请求（符合start_batch接口要求）
         const response = await fetch('/start_batch', {
