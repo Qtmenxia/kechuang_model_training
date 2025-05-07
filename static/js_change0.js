@@ -12,7 +12,7 @@ function generateBatchParams(total = 100) {
         // 生成随机特征（基于网页2的数学随机方法）
         const params = {
             gender: Math.random() > 0.5 ? '男性' : '女性',
-            character: `驾驶员${i+1}`, // 自动生成驾驶员编号
+            character: `驾驶员${i + 1}`, // 自动生成驾驶员编号
             speed: Math.floor(Math.random() * 160), // 0-160km/h随机车速
             added_key_value: {}
         };
@@ -21,6 +21,10 @@ function generateBatchParams(total = 100) {
         dynamicKeys.forEach(key => {
             params.added_key_value[key] = Math.random() > 0.5 ? '是' : '否';
         });
+
+        if (speed <= 20) {
+            params.added_key_value['overspeeding'] = '否';
+        }
 
         batchParams.push(params);
     }
