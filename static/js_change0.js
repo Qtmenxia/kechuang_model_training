@@ -22,7 +22,7 @@ function generateBatchParams(total = 100) {
             params.added_key_value[key] = Math.random() > 0.5 ? '是' : '否';
         });
 
-        if (speed <= 20) {
+        if (params.speed <= 20) {
             params.added_key_value['overspeeding'] = '否';
         }
 
